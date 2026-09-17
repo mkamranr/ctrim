@@ -19,7 +19,9 @@ All notable changes to this project are documented here. The format follows
 
 ## [0.1.0] - 2026-09-17
 
-First release.
+First tagged release. Binaries for macOS, Linux and Windows are attached to the
+GitHub release; the crates.io publish and the Homebrew tap update run only once
+their tokens are configured.
 
 ### Added
 

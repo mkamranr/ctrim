@@ -102,7 +102,13 @@ jobs:
       - name: Publish to crates.io
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: cargo publish --locked
+        run: |
+          if [ -z "${CARGO_REGISTRY_TOKEN}" ]; then
+            echo "CARGO_REGISTRY_TOKEN is not set; skipping the crates.io publish." \
+              >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          cargo publish --locked
 
   homebrew:
     needs: publish
@@ -113,10 +119,16 @@ jobs:
           path: artifacts
           merge-multiple: true
 
+      # The tap lives in another repository, so it needs a token of its own.
       - name: Update the tap formula
         env:
           TAP_TOKEN: ${{ secrets.TAP_TOKEN }}
         run: |
+          if [ -z "${TAP_TOKEN}" ]; then
+            echo "TAP_TOKEN is not set; skipping the Homebrew tap update." \
+              >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           VERSION="${GITHUB_REF_NAME#v}"
           sha() { grep -h "$1" artifacts/*.sha256 | cut -d' ' -f1; }
           git clone "https://x-access-token:${TAP_TOKEN}@github.com/mkamranr/homebrew-tap.git" tap
