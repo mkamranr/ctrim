@@ -1,0 +1,22 @@
+---
+source: tests/snapshot_tests.rs
+expression: "compress(fixture, OutputFormat::Xml)"
+---
+<context type="git-diff">
+[skipped generated file Cargo.lock: +2/-2 lines]
+diff --git a/logo.png b/logo.png
+[binary file logo.png changed]
+diff --git a/src/handler.rs b/src/handler.rs
+--- a/src/handler.rs
++++ b/src/handler.rs
+@@ -3,3 +3,3 @@
+     // routine line 2 of the request handler
+-    // routine line 3 of the request handler
++    let user = authenticate(&req)?;
+     // routine line 4 of the request handler
+@@ -40,3 +40,3 @@
+     // routine line 39 of the request handler
+-    // routine line 40 of the request handler
++    metrics.record("handled", 1);
+     // routine line 41 of the request handler
+</context>

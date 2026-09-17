@@ -1,0 +1,44 @@
+name: Output we compress badly
+description: Paste output ctrim left noisy, or trimmed too hard
+title: "[noise] "
+labels: ["heuristics"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful issue you can open. Real output is what the
+        heuristics are tuned against, and every fixture in the repo started as
+        one of these.
+  - type: textarea
+    id: input
+    attributes:
+      label: The raw output
+      description: What you piped in. Trim it to the smallest piece that still shows the problem, and redact anything private.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What ctrim produced
+      description: The output of `ctrim --format raw` on the text above.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+      description: Which lines should have survived, or which should have been folded.
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command
+      placeholder: pytest 2>&1 | ctrim --format xml
+  - type: input
+    id: version
+    attributes:
+      label: ctrim version
+      placeholder: ctrim --version

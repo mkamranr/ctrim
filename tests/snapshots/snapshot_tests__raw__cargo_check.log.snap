@@ -1,0 +1,45 @@
+---
+source: tests/snapshot_tests.rs
+expression: "compress(fixture, OutputFormat::Raw)"
+---
+    Checking brokencrate v0.1.0 (/home/dev/projects/brokencrate)
+error[E0308]: mismatched types
+ --> src/main.rs:6:5
+  |
+3 | fn load(path: &str) -> HashMap<String, u32> {
+  |                        -------------------- expected `HashMap<String, u32>` because of return type
+4 |     let mut map = HashMap::new();
+5 |     map.insert(path, 1);
+  |     ---        ---- this argument has type `&str`...
+  |     |
+  |     ... which causes `map` to have type `HashMap<&str, {integer}>`
+6 |     map
+  |     ^^^ expected `HashMap<String, u32>`, found `HashMap<&str, {integer}>`
+  |
+  = note: expected struct `HashMap<String, u32>`
+             found struct `HashMap<&str, {integer}>`
+help: try using a conversion method
+  |
+5 |     map.insert(path.to_string(), 1);
+  |                    ++++++++++++
+
+  --> src/main.rs:10:25
+   |
+10 |     let cfg: Vec<u32> = load("a.toml");
+[+1 more occurrences of: "error[E0308]: mismatched types"]
+   |              --------   ^^^^^^^^^^^^^^ expected `Vec<u32>`, found `HashMap<String, u32>`
+   |              |
+   |              expected due to this
+   |
+   = note: expected struct `Vec<u32>`
+              found struct `HashMap<String, u32>`
+
+error[E0599]: no method named `missing_method` found for struct `Vec<u32>` in the current scope
+  --> src/main.rs:12:24
+   |
+12 |     println!("{}", cfg.missing_method());
+   |                        ^^^^^^^^^^^^^^ method not found in `Vec<u32>`
+
+Some errors have detailed explanations: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `brokencrate` (bin "brokencrate") due to 3 previous errors

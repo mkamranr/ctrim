@@ -1,0 +1,7 @@
+/target
+/tests/fixtures/generated
+*.profraw
+.DS_Store
+
+# Internal requirements document, not part of the published project
+prd_specification.md

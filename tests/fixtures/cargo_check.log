@@ -1,0 +1,41 @@
+[1m[92m    Checking[0m brokencrate v0.1.0 (/home/dev/projects/brokencrate)
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+ [1m[94m--> [0msrc/main.rs:6:5
+  [1m[94m|[0m
+[1m[94m3[0m [1m[94m|[0m fn load(path: &str) -> HashMap<String, u32> {
+  [1m[94m|[0m                        [1m[94m--------------------[0m [1m[94mexpected `HashMap<String, u32>` because of return type[0m
+[1m[94m4[0m [1m[94m|[0m     let mut map = HashMap::new();
+[1m[94m5[0m [1m[94m|[0m     map.insert(path, 1);
+  [1m[94m|[0m     [1m[94m---[0m        [1m[94m----[0m [1m[94mthis argument has type `&str`...[0m
+  [1m[94m|[0m     [1m[94m|[0m
+  [1m[94m|[0m     [1m[94m... which causes `map` to have type `HashMap<&str, {integer}>`[0m
+[1m[94m6[0m [1m[94m|[0m     map
+  [1m[94m|[0m     [1m[91m^^^[0m [1m[91mexpected `HashMap<String, u32>`, found `HashMap<&str, {integer}>`[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mnote[0m: expected struct `HashMap<[1m[35mString[0m, [1m[35mu32[0m>`
+             found struct `HashMap<[1m[35m&[0m[1m[35mstr[0m, [1m[35m{integer}[0m>`
+[1m[96mhelp[0m: try using a conversion method
+  [1m[94m|[0m
+[1m[94m5[0m [1m[94m| [0m    map.insert(path[92m.to_string()[0m, 1);
+  [1m[94m|[0m                    [92m++++++++++++[0m
+
+[1m[91merror[E0308][0m[1m: mismatched types[0m
+  [1m[94m--> [0msrc/main.rs:10:25
+   [1m[94m|[0m
+[1m[94m10[0m [1m[94m|[0m     let cfg: Vec<u32> = load("a.toml");
+   [1m[94m|[0m              [1m[94m--------[0m   [1m[91m^^^^^^^^^^^^^^[0m [1m[91mexpected `Vec<u32>`, found `HashMap<String, u32>`[0m
+   [1m[94m|[0m              [1m[94m|[0m
+   [1m[94m|[0m              [1m[94mexpected due to this[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: expected struct `[1m[35mVec<u32>[0m`
+              found struct `[1m[35mHashMap<String, u32>[0m`
+
+[1m[91merror[E0599][0m[1m: no method named `missing_method` found for struct `Vec<u32>` in the current scope[0m
+  [1m[94m--> [0msrc/main.rs:12:24
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m     println!("{}", cfg.missing_method());
+   [1m[94m|[0m                        [1m[91m^^^^^^^^^^^^^^[0m [1m[91mmethod not found in `Vec<u32>`[0m
+
+[1mSome errors have detailed explanations: E0308, E0599.[0m
+[1mFor more information about an error, try `rustc --explain E0308`.[0m
+[1m[91merror[0m: could not compile `brokencrate` (bin "brokencrate") due to 3 previous errors

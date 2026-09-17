@@ -1,0 +1,78 @@
+---
+source: tests/snapshot_tests.rs
+expression: "compress(fixture, OutputFormat::Xml)"
+---
+<context type="pytest">
+============================= test session starts ==============================
+platform darwin -- Python 3.11.8, pytest-8.1.1, pluggy-1.4.0
+rootdir: /Users/dev/projects/shop-api
+configfile: pyproject.toml
+plugins: anyio-4.3.0, cov-5.0.0, mock-3.14.0
+collected 148 items
+
+tests/test_auth.py ..........                                            [  6%]
+tests/test_cart.py .....................                                 [ 21%]
+tests/test_checkout.py .........F                                        [ 27%]
+tests/test_orders.py ...................................                 [ 51%]
+tests/test_payments.py ..................F                               [ 64%]
+tests/test_products.py ..................................                [ 87%]
+tests/test_users.py ..................                                   [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_checkout_totals _____________________________
+
+client = <starlette.testclient.TestClient object at 0x10f3c2d50>
+cart_factory = <function cart_factory.<locals>._make at 0x10f3e1440>
+
+    def test_checkout_totals(client, cart_factory):
+        cart = cart_factory(items=3, currency="EUR")
+>       resp = client.post("/checkout", json=cart.as_payload())
+
+tests/test_checkout.py:64: in test_checkout_totals
+    resp = client.post("/checkout", json=cart.as_payload())
+[... 9 vendor frames omitted ...]
+../../.venv/lib/python3.11/site-packages/anyio/from_thread.py:288: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+../../.venv/lib/python3.11/site-packages/starlette/middleware/errors.py:164: in __call__
+    await self.app(scope, receive, _send)
+../../.venv/lib/python3.11/site-packages/starlette/routing.py:746: in __call__
+    await route.handle(scope, receive, send)
+app/api/checkout.py:112: in create_checkout
+    total = pricing.total_for(cart, currency=cart.currency)
+app/services/pricing.py:57: in total_for
+    return sum(line.subtotal for line in cart.lines) * rate
+E   TypeError: unsupported operand type(s) for *: 'Decimal' and 'NoneType'
+_____________________________ test_refund_partial ______________________________
+
+    def test_refund_partial(payment_client):
+        payment = payment_client.charge(amount=1200, currency="EUR")
+>       refund = payment_client.refund(payment.id, amount=1500)
+
+tests/test_payments.py:203: in test_refund_partial
+    refund = payment_client.refund(payment.id, amount=1500)
+app/services/payments.py:88: in refund
+    raise RefundError(f"refund {amount} exceeds charge {payment.amount}")
+E   app.errors.RefundError: refund 1500 exceeds charge 1200
+
+=============================== warnings summary ===============================
+../../.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:334
+  /Users/dev/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:334: UserWarning: Valid config keys have changed in V2: 'orm_mode' has been renamed to 'from_attributes'
+    warnings.warn(message, UserWarning)
+
+tests/test_orders.py::test_order_history
+  /Users/dev/projects/shop-api/app/db/session.py:44: DeprecationWarning: The Session.execute() method is deprecated, use Session.scalars()
+    rows = session.execute(query).fetchall()
+
+[+3 more occurrences of: "../../.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:334"]
+[+3 more occurrences of: "/Users/dev/.venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:334: UserWarning: Valid config keys have cha..."]
+[+3 more occurrences of: "warnings.warn(message, UserWarning)"]
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_checkout.py::test_checkout_totals - TypeError: unsupported operand type(s) for *: 'Decimal' and 'NoneType'
+FAILED tests/test_payments.py::test_refund_partial - app.errors.RefundError: refund 1500 exceeds charge 1200
+=================== 2 failed, 146 passed, 5 warnings in 18.44s =================
+</context>
+<error_summary>
+E   TypeError: unsupported operand type(s) for *: 'Decimal' and 'NoneType'
+E   app.errors.RefundError: refund 1500 exceeds charge 1200
+</error_summary>

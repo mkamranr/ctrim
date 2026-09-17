@@ -1,0 +1,47 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 3dbd561..31293f8 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -9,7 +9,7 @@ checksum = "d23f0824128b2f330c5c7fd0a6a3a4506513270e269e0d37f2a74de452e6b438"
+ 
+ [[package]]
+ name = "dep1"
+-version = "1.0.1"
++version = "1.1.1"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "36f675cc81e74ef5e8e25d940ed904759531985d5d9dc9f81818e811892f902b"
+ 
+@@ -39,7 +39,7 @@ checksum = "6b4cb2424a23d5962217beaddbc496cb8e81973e0becd7b03898d190f9ebdacc"
+ 
+ [[package]]
+ name = "dep6"
+-version = "1.0.6"
++version = "1.1.6"
+ source = "registry+https://github.com/rust-lang/crates.io-index"
+ checksum = "ae97ba94d0eda82f8f6d05584ef8aa38922766581e27a1c08a6a63ec24ede6a4"
+ 
+diff --git a/logo.png b/logo.png
+index 90f11d5..bfc3198 100644
+Binary files a/logo.png and b/logo.png differ
+diff --git a/src/handler.rs b/src/handler.rs
+index 5a42d22..65c847f 100644
+--- a/src/handler.rs
++++ b/src/handler.rs
+@@ -1,7 +1,7 @@
+ pub fn handle(req: Request) -> Response {
+     // routine line 1 of the request handler
+     // routine line 2 of the request handler
+-    // routine line 3 of the request handler
++    let user = authenticate(&req)?;
+     // routine line 4 of the request handler
+     // routine line 5 of the request handler
+     // routine line 6 of the request handler
+@@ -38,7 +38,7 @@ pub fn handle(req: Request) -> Response {
+     // routine line 37 of the request handler
+     // routine line 38 of the request handler
+     // routine line 39 of the request handler
+-    // routine line 40 of the request handler
++    metrics.record("handled", 1);
+     // routine line 41 of the request handler
+     // routine line 42 of the request handler
+     // routine line 43 of the request handler

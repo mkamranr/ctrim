@@ -1,0 +1,23 @@
+name: Feature request
+description: A format, flag, or integration ctrim should support
+title: "[feat] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you piping into a model, and what is wasteful about it today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you have in mind
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Does it fit what ctrim is?
+      options:
+        - label: It removes noise without rewording what survives
+        - label: It works as a streaming filter, with bounded memory

@@ -1,0 +1,174 @@
+api_1        | 2024-05-01T10:00:01.243Z level=info msg="starting api server" version=1.4.2
+api_1        | 2024-05-01T10:00:02.606Z level=info msg="listening on 0.0.0.0:8080"
+db_1         | 2024-05-01T10:00:03.557Z level=info msg="database system is ready to accept connections"
+api_1        | 2024-05-01T10:00:04.133Z level=warn msg="connection to redis refused, retrying" attempt=1 backoff=250ms
+api_1        | 2024-05-01T10:00:05.378Z level=warn msg="connection to redis refused, retrying" attempt=2 backoff=250ms
+api_1        | 2024-05-01T10:00:06.937Z level=warn msg="connection to redis refused, retrying" attempt=3 backoff=250ms
+api_1        | 2024-05-01T10:00:07.618Z level=warn msg="connection to redis refused, retrying" attempt=4 backoff=250ms
+api_1        | 2024-05-01T10:00:08.485Z level=warn msg="connection to redis refused, retrying" attempt=5 backoff=250ms
+api_1        | 2024-05-01T10:00:09.640Z level=warn msg="connection to redis refused, retrying" attempt=6 backoff=250ms
+api_1        | 2024-05-01T10:00:10.594Z level=warn msg="connection to redis refused, retrying" attempt=7 backoff=250ms
+api_1        | 2024-05-01T10:00:11.067Z level=warn msg="connection to redis refused, retrying" attempt=8 backoff=250ms
+api_1        | 2024-05-01T10:00:12.620Z level=warn msg="connection to redis refused, retrying" attempt=9 backoff=250ms
+api_1        | 2024-05-01T10:00:13.013Z level=warn msg="connection to redis refused, retrying" attempt=10 backoff=250ms
+api_1        | 2024-05-01T10:00:14.930Z level=warn msg="connection to redis refused, retrying" attempt=11 backoff=250ms
+api_1        | 2024-05-01T10:00:15.857Z level=warn msg="connection to redis refused, retrying" attempt=12 backoff=250ms
+api_1        | 2024-05-01T10:00:16.480Z level=warn msg="connection to redis refused, retrying" attempt=13 backoff=250ms
+api_1        | 2024-05-01T10:00:17.265Z level=warn msg="connection to redis refused, retrying" attempt=14 backoff=250ms
+api_1        | 2024-05-01T10:00:18.564Z level=warn msg="connection to redis refused, retrying" attempt=15 backoff=250ms
+api_1        | 2024-05-01T10:00:19.239Z level=warn msg="connection to redis refused, retrying" attempt=16 backoff=250ms
+api_1        | 2024-05-01T10:00:20.196Z level=warn msg="connection to redis refused, retrying" attempt=17 backoff=250ms
+api_1        | 2024-05-01T10:00:21.734Z level=warn msg="connection to redis refused, retrying" attempt=18 backoff=250ms
+api_1        | 2024-05-01T10:00:22.481Z level=warn msg="connection to redis refused, retrying" attempt=19 backoff=250ms
+api_1        | 2024-05-01T10:00:23.553Z level=warn msg="connection to redis refused, retrying" attempt=20 backoff=250ms
+worker_1     | 2024-05-01T10:00:24.856Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:00:25.562Z level=warn msg="connection to redis refused, retrying" attempt=21 backoff=250ms
+api_1        | 2024-05-01T10:00:26.487Z level=warn msg="connection to redis refused, retrying" attempt=22 backoff=250ms
+api_1        | 2024-05-01T10:00:27.406Z level=warn msg="connection to redis refused, retrying" attempt=23 backoff=250ms
+api_1        | 2024-05-01T10:00:28.654Z level=warn msg="connection to redis refused, retrying" attempt=24 backoff=250ms
+api_1        | 2024-05-01T10:00:29.881Z level=warn msg="connection to redis refused, retrying" attempt=25 backoff=250ms
+api_1        | 2024-05-01T10:00:30.154Z level=warn msg="connection to redis refused, retrying" attempt=26 backoff=250ms
+api_1        | 2024-05-01T10:00:31.237Z level=warn msg="connection to redis refused, retrying" attempt=27 backoff=250ms
+api_1        | 2024-05-01T10:00:32.650Z level=warn msg="connection to redis refused, retrying" attempt=28 backoff=250ms
+api_1        | 2024-05-01T10:00:33.155Z level=warn msg="connection to redis refused, retrying" attempt=29 backoff=250ms
+api_1        | 2024-05-01T10:00:34.888Z level=warn msg="connection to redis refused, retrying" attempt=30 backoff=250ms
+api_1        | 2024-05-01T10:00:35.948Z level=warn msg="connection to redis refused, retrying" attempt=31 backoff=250ms
+api_1        | 2024-05-01T10:00:36.535Z level=warn msg="connection to redis refused, retrying" attempt=32 backoff=250ms
+api_1        | 2024-05-01T10:00:37.399Z level=warn msg="connection to redis refused, retrying" attempt=33 backoff=250ms
+api_1        | 2024-05-01T10:00:38.759Z level=warn msg="connection to redis refused, retrying" attempt=34 backoff=250ms
+api_1        | 2024-05-01T10:00:39.015Z level=warn msg="connection to redis refused, retrying" attempt=35 backoff=250ms
+api_1        | 2024-05-01T10:00:40.687Z level=warn msg="connection to redis refused, retrying" attempt=36 backoff=250ms
+api_1        | 2024-05-01T10:00:41.795Z level=warn msg="connection to redis refused, retrying" attempt=37 backoff=250ms
+api_1        | 2024-05-01T10:00:42.065Z level=warn msg="connection to redis refused, retrying" attempt=38 backoff=250ms
+api_1        | 2024-05-01T10:00:43.163Z level=warn msg="connection to redis refused, retrying" attempt=39 backoff=250ms
+api_1        | 2024-05-01T10:00:44.776Z level=warn msg="connection to redis refused, retrying" attempt=40 backoff=250ms
+worker_1     | 2024-05-01T10:00:45.980Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:00:46.605Z level=warn msg="connection to redis refused, retrying" attempt=41 backoff=250ms
+api_1        | 2024-05-01T10:00:47.043Z level=warn msg="connection to redis refused, retrying" attempt=42 backoff=250ms
+api_1        | 2024-05-01T10:00:48.308Z level=warn msg="connection to redis refused, retrying" attempt=43 backoff=250ms
+api_1        | 2024-05-01T10:00:49.798Z level=warn msg="connection to redis refused, retrying" attempt=44 backoff=250ms
+api_1        | 2024-05-01T10:00:50.031Z level=warn msg="connection to redis refused, retrying" attempt=45 backoff=250ms
+api_1        | 2024-05-01T10:00:51.843Z level=warn msg="connection to redis refused, retrying" attempt=46 backoff=250ms
+api_1        | 2024-05-01T10:00:52.886Z level=warn msg="connection to redis refused, retrying" attempt=47 backoff=250ms
+api_1        | 2024-05-01T10:00:53.275Z level=warn msg="connection to redis refused, retrying" attempt=48 backoff=250ms
+api_1        | 2024-05-01T10:00:54.484Z level=warn msg="connection to redis refused, retrying" attempt=49 backoff=250ms
+api_1        | 2024-05-01T10:00:55.609Z level=warn msg="connection to redis refused, retrying" attempt=50 backoff=250ms
+api_1        | 2024-05-01T10:00:56.736Z level=warn msg="connection to redis refused, retrying" attempt=51 backoff=250ms
+api_1        | 2024-05-01T10:00:57.942Z level=warn msg="connection to redis refused, retrying" attempt=52 backoff=250ms
+api_1        | 2024-05-01T10:00:58.899Z level=warn msg="connection to redis refused, retrying" attempt=53 backoff=250ms
+api_1        | 2024-05-01T10:00:59.396Z level=warn msg="connection to redis refused, retrying" attempt=54 backoff=250ms
+api_1        | 2024-05-01T10:01:00.731Z level=warn msg="connection to redis refused, retrying" attempt=55 backoff=250ms
+api_1        | 2024-05-01T10:01:01.807Z level=warn msg="connection to redis refused, retrying" attempt=56 backoff=250ms
+api_1        | 2024-05-01T10:01:02.943Z level=warn msg="connection to redis refused, retrying" attempt=57 backoff=250ms
+api_1        | 2024-05-01T10:01:03.437Z level=warn msg="connection to redis refused, retrying" attempt=58 backoff=250ms
+api_1        | 2024-05-01T10:01:04.404Z level=warn msg="connection to redis refused, retrying" attempt=59 backoff=250ms
+api_1        | 2024-05-01T10:01:05.745Z level=warn msg="connection to redis refused, retrying" attempt=60 backoff=250ms
+worker_1     | 2024-05-01T10:01:06.820Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:01:07.590Z level=warn msg="connection to redis refused, retrying" attempt=61 backoff=250ms
+api_1        | 2024-05-01T10:01:08.455Z level=warn msg="connection to redis refused, retrying" attempt=62 backoff=250ms
+api_1        | 2024-05-01T10:01:09.987Z level=warn msg="connection to redis refused, retrying" attempt=63 backoff=250ms
+api_1        | 2024-05-01T10:01:10.958Z level=warn msg="connection to redis refused, retrying" attempt=64 backoff=250ms
+api_1        | 2024-05-01T10:01:11.137Z level=warn msg="connection to redis refused, retrying" attempt=65 backoff=250ms
+api_1        | 2024-05-01T10:01:12.899Z level=warn msg="connection to redis refused, retrying" attempt=66 backoff=250ms
+api_1        | 2024-05-01T10:01:13.374Z level=warn msg="connection to redis refused, retrying" attempt=67 backoff=250ms
+api_1        | 2024-05-01T10:01:14.099Z level=warn msg="connection to redis refused, retrying" attempt=68 backoff=250ms
+api_1        | 2024-05-01T10:01:15.036Z level=warn msg="connection to redis refused, retrying" attempt=69 backoff=250ms
+api_1        | 2024-05-01T10:01:16.139Z level=warn msg="connection to redis refused, retrying" attempt=70 backoff=250ms
+api_1        | 2024-05-01T10:01:17.506Z level=warn msg="connection to redis refused, retrying" attempt=71 backoff=250ms
+api_1        | 2024-05-01T10:01:18.222Z level=warn msg="connection to redis refused, retrying" attempt=72 backoff=250ms
+api_1        | 2024-05-01T10:01:19.264Z level=warn msg="connection to redis refused, retrying" attempt=73 backoff=250ms
+api_1        | 2024-05-01T10:01:20.988Z level=warn msg="connection to redis refused, retrying" attempt=74 backoff=250ms
+api_1        | 2024-05-01T10:01:21.688Z level=warn msg="connection to redis refused, retrying" attempt=75 backoff=250ms
+api_1        | 2024-05-01T10:01:22.446Z level=warn msg="connection to redis refused, retrying" attempt=76 backoff=250ms
+api_1        | 2024-05-01T10:01:23.797Z level=warn msg="connection to redis refused, retrying" attempt=77 backoff=250ms
+api_1        | 2024-05-01T10:01:24.641Z level=warn msg="connection to redis refused, retrying" attempt=78 backoff=250ms
+api_1        | 2024-05-01T10:01:25.875Z level=warn msg="connection to redis refused, retrying" attempt=79 backoff=250ms
+api_1        | 2024-05-01T10:01:26.308Z level=warn msg="connection to redis refused, retrying" attempt=80 backoff=250ms
+worker_1     | 2024-05-01T10:01:27.431Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:01:28.519Z level=warn msg="connection to redis refused, retrying" attempt=81 backoff=250ms
+api_1        | 2024-05-01T10:01:29.853Z level=warn msg="connection to redis refused, retrying" attempt=82 backoff=250ms
+api_1        | 2024-05-01T10:01:30.395Z level=warn msg="connection to redis refused, retrying" attempt=83 backoff=250ms
+api_1        | 2024-05-01T10:01:31.587Z level=warn msg="connection to redis refused, retrying" attempt=84 backoff=250ms
+api_1        | 2024-05-01T10:01:32.359Z level=warn msg="connection to redis refused, retrying" attempt=85 backoff=250ms
+api_1        | 2024-05-01T10:01:33.546Z level=warn msg="connection to redis refused, retrying" attempt=86 backoff=250ms
+api_1        | 2024-05-01T10:01:34.599Z level=warn msg="connection to redis refused, retrying" attempt=87 backoff=250ms
+api_1        | 2024-05-01T10:01:35.417Z level=warn msg="connection to redis refused, retrying" attempt=88 backoff=250ms
+api_1        | 2024-05-01T10:01:36.598Z level=warn msg="connection to redis refused, retrying" attempt=89 backoff=250ms
+api_1        | 2024-05-01T10:01:37.237Z level=warn msg="connection to redis refused, retrying" attempt=90 backoff=250ms
+api_1        | 2024-05-01T10:01:38.925Z level=warn msg="connection to redis refused, retrying" attempt=91 backoff=250ms
+api_1        | 2024-05-01T10:01:39.344Z level=warn msg="connection to redis refused, retrying" attempt=92 backoff=250ms
+api_1        | 2024-05-01T10:01:40.698Z level=warn msg="connection to redis refused, retrying" attempt=93 backoff=250ms
+api_1        | 2024-05-01T10:01:41.937Z level=warn msg="connection to redis refused, retrying" attempt=94 backoff=250ms
+api_1        | 2024-05-01T10:01:42.951Z level=warn msg="connection to redis refused, retrying" attempt=95 backoff=250ms
+api_1        | 2024-05-01T10:01:43.029Z level=warn msg="connection to redis refused, retrying" attempt=96 backoff=250ms
+api_1        | 2024-05-01T10:01:44.876Z level=warn msg="connection to redis refused, retrying" attempt=97 backoff=250ms
+api_1        | 2024-05-01T10:01:45.286Z level=warn msg="connection to redis refused, retrying" attempt=98 backoff=250ms
+api_1        | 2024-05-01T10:01:46.620Z level=warn msg="connection to redis refused, retrying" attempt=99 backoff=250ms
+api_1        | 2024-05-01T10:01:47.687Z level=warn msg="connection to redis refused, retrying" attempt=100 backoff=250ms
+worker_1     | 2024-05-01T10:01:48.712Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:01:49.167Z level=warn msg="connection to redis refused, retrying" attempt=101 backoff=250ms
+api_1        | 2024-05-01T10:01:50.715Z level=warn msg="connection to redis refused, retrying" attempt=102 backoff=250ms
+api_1        | 2024-05-01T10:01:51.881Z level=warn msg="connection to redis refused, retrying" attempt=103 backoff=250ms
+api_1        | 2024-05-01T10:01:52.334Z level=warn msg="connection to redis refused, retrying" attempt=104 backoff=250ms
+api_1        | 2024-05-01T10:01:53.987Z level=warn msg="connection to redis refused, retrying" attempt=105 backoff=250ms
+api_1        | 2024-05-01T10:01:54.554Z level=warn msg="connection to redis refused, retrying" attempt=106 backoff=250ms
+api_1        | 2024-05-01T10:01:55.926Z level=warn msg="connection to redis refused, retrying" attempt=107 backoff=250ms
+api_1        | 2024-05-01T10:01:56.585Z level=warn msg="connection to redis refused, retrying" attempt=108 backoff=250ms
+api_1        | 2024-05-01T10:01:57.582Z level=warn msg="connection to redis refused, retrying" attempt=109 backoff=250ms
+api_1        | 2024-05-01T10:01:58.106Z level=warn msg="connection to redis refused, retrying" attempt=110 backoff=250ms
+api_1        | 2024-05-01T10:01:59.730Z level=warn msg="connection to redis refused, retrying" attempt=111 backoff=250ms
+api_1        | 2024-05-01T10:02:00.671Z level=warn msg="connection to redis refused, retrying" attempt=112 backoff=250ms
+api_1        | 2024-05-01T10:02:01.216Z level=warn msg="connection to redis refused, retrying" attempt=113 backoff=250ms
+api_1        | 2024-05-01T10:02:02.648Z level=warn msg="connection to redis refused, retrying" attempt=114 backoff=250ms
+api_1        | 2024-05-01T10:02:03.851Z level=warn msg="connection to redis refused, retrying" attempt=115 backoff=250ms
+api_1        | 2024-05-01T10:02:04.587Z level=warn msg="connection to redis refused, retrying" attempt=116 backoff=250ms
+api_1        | 2024-05-01T10:02:05.273Z level=warn msg="connection to redis refused, retrying" attempt=117 backoff=250ms
+api_1        | 2024-05-01T10:02:06.291Z level=warn msg="connection to redis refused, retrying" attempt=118 backoff=250ms
+api_1        | 2024-05-01T10:02:07.127Z level=warn msg="connection to redis refused, retrying" attempt=119 backoff=250ms
+api_1        | 2024-05-01T10:02:08.064Z level=warn msg="connection to redis refused, retrying" attempt=120 backoff=250ms
+worker_1     | 2024-05-01T10:02:09.493Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:02:10.874Z level=error msg="redis unavailable after 120 attempts, degrading to no-cache mode"
+api_1        | 2024-05-01T10:02:11.654Z level=info msg="GET /healthz" status=200 duration_ms=8
+api_1        | 2024-05-01T10:02:12.090Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:13.819Z level=info msg="GET /healthz" status=200 duration_ms=2
+api_1        | 2024-05-01T10:02:14.420Z level=info msg="GET /healthz" status=200 duration_ms=3
+api_1        | 2024-05-01T10:02:15.020Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:16.437Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:17.893Z level=info msg="GET /healthz" status=200 duration_ms=2
+api_1        | 2024-05-01T10:02:18.045Z level=info msg="GET /healthz" status=200 duration_ms=1
+api_1        | 2024-05-01T10:02:19.386Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:20.564Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:21.517Z level=info msg="GET /healthz" status=200 duration_ms=4
+api_1        | 2024-05-01T10:02:22.036Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:23.007Z level=info msg="GET /healthz" status=200 duration_ms=2
+api_1        | 2024-05-01T10:02:24.110Z level=info msg="GET /healthz" status=200 duration_ms=9
+api_1        | 2024-05-01T10:02:25.032Z level=info msg="GET /healthz" status=200 duration_ms=4
+api_1        | 2024-05-01T10:02:26.994Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:27.298Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:28.159Z level=info msg="GET /healthz" status=200 duration_ms=1
+api_1        | 2024-05-01T10:02:29.888Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:30.321Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:31.981Z level=info msg="GET /healthz" status=200 duration_ms=3
+api_1        | 2024-05-01T10:02:32.918Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:33.385Z level=info msg="GET /healthz" status=200 duration_ms=8
+api_1        | 2024-05-01T10:02:34.890Z level=info msg="GET /healthz" status=200 duration_ms=9
+api_1        | 2024-05-01T10:02:35.395Z level=info msg="GET /healthz" status=200 duration_ms=9
+api_1        | 2024-05-01T10:02:36.105Z level=info msg="GET /healthz" status=200 duration_ms=9
+api_1        | 2024-05-01T10:02:37.277Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:38.649Z level=info msg="GET /healthz" status=200 duration_ms=4
+api_1        | 2024-05-01T10:02:39.958Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:40.447Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:41.533Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:42.561Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:43.011Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:44.593Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:45.020Z level=info msg="GET /healthz" status=200 duration_ms=7
+api_1        | 2024-05-01T10:02:46.630Z level=info msg="GET /healthz" status=200 duration_ms=3
+api_1        | 2024-05-01T10:02:47.061Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:48.477Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:49.695Z level=info msg="GET /healthz" status=200 duration_ms=6
+api_1        | 2024-05-01T10:02:50.623Z level=info msg="GET /healthz" status=200 duration_ms=5
+api_1        | 2024-05-01T10:02:51.755Z level=error msg="unhandled exception in request handler" request_id=05adc0117d500f7c
+api_1        | Traceback (most recent call last):
+api_1        |   File "/srv/app/api/routes.py", line 88, in get_user
+api_1        |     return store.fetch(user_id)

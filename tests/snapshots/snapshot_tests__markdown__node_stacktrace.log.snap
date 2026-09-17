@@ -1,0 +1,27 @@
+---
+source: tests/snapshot_tests.rs
+expression: "compress(fixture, OutputFormat::Markdown)"
+---
+```text
+> shop-web@2.1.0 test
+> jest --runInBand
+
+ FAIL  src/checkout/__tests__/total.test.ts
+  ● calculates the order total
+
+    TypeError: Cannot read properties of undefined (reading 'rate')
+
+    at Object.applyTax (/Users/dev/shop-web/src/checkout/tax.ts:22:31)
+    at calculateTotal (/Users/dev/shop-web/src/checkout/total.ts:48:18)
+[... 8 vendor frames omitted ...]
+    at _runTestsForDescribeBlock (/Users/dev/shop-web/node_modules/jest-circus/build/run.js:97:9)
+    at run (/Users/dev/shop-web/node_modules/jest-circus/build/run.js:31:3)
+    at runAndTransformResultsToJestFormat (/Users/dev/shop-web/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:144:21)
+    at Object.<anonymous> (/Users/dev/shop-web/src/checkout/__tests__/total.test.ts:15:20)
+
+Test Suites: 1 failed, 12 passed, 13 total
+Tests:       1 failed, 84 passed, 85 total
+```
+
+**Errors**
+- TypeError: Cannot read properties of undefined (reading 'rate')

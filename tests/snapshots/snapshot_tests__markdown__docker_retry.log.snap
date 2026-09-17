@@ -1,0 +1,19 @@
+---
+source: tests/snapshot_tests.rs
+expression: "compress(fixture, OutputFormat::Markdown)"
+---
+```text
+api_1        | 2024-05-01T10:00:01.243Z level=info msg="starting api server" version=1.4.2
+api_1        | 2024-05-01T10:00:02.606Z level=info msg="listening on 0.0.0.0:8080"
+db_1         | 2024-05-01T10:00:03.557Z level=info msg="database system is ready to accept connections"
+[Repeated 20 times: "api_1        | 2024-05-01T10:00:04.133Z level=warn msg="connection to redis refused, retrying" attempt=1 backoff=250ms"]
+worker_1     | 2024-05-01T10:00:24.856Z level=info msg="job queue drained" pending=0
+api_1        | 2024-05-01T10:02:10.874Z level=error msg="redis unavailable after 120 attempts, degrading to no-cache mode"
+[Repeated 40 times: "api_1        | 2024-05-01T10:02:11.654Z level=info msg="GET /healthz" status=200 duration_ms=8"]
+api_1        | 2024-05-01T10:02:51.755Z level=error msg="unhandled exception in request handler" request_id=05adc0117d500f7c
+[+100 more occurrences of: "api_1        | 2024-05-01T10:00:04.133Z level=warn msg="connection to redis refused, retrying" attempt=1 backoff=250ms"]
+[+5 more occurrences of: "worker_1     | 2024-05-01T10:00:24.856Z level=info msg="job queue drained" pending=0"]
+api_1        | Traceback (most recent call last):
+api_1        |   File "/srv/app/api/routes.py", line 88, in get_user
+api_1        |     return store.fetch(user_id)
+```
