@@ -7,6 +7,16 @@ should have survived; the "noisy output" issue template asks for exactly that.
 Every fixture in `tests/fixtures/` came from real output, and that is what keeps
 the heuristics honest.
 
+## Documentation
+
+| Document | What it covers |
+| :--- | :--- |
+| [docs/architecture.md](docs/architecture.md) | The pipeline, the traits, memory and throughput |
+| [docs/heuristics.md](docs/heuristics.md) | Every removal rule and the safety guarantees behind it |
+| [docs/usage.md](docs/usage.md) | Flags and recipes |
+| [docs/library.md](docs/library.md) | The crate API |
+| [docs/tokens.md](docs/tokens.md) | Token estimation and how to refit it |
+
 ## Getting set up
 
 ```bash
